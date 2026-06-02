@@ -1,3 +1,4 @@
+
 #include "turtlec.h"
 void arbolcolores(Turtle* t, float l, int n, int r, int g, int b) {
     if (n == 0) return;
@@ -8,7 +9,9 @@ void arbolcolores(Turtle* t, float l, int n, int r, int g, int b) {
     turtleRight(t, 50);
     arbolcolores(t, l * 0.7f, n - 1, r + 50, g + 50, b + 50);
     turtleLeft(t, 25);
+    turtlePenUp(t);
     turtleBackward(t, l);
+    turtlePenDown(t);
 }
 int main(void) {
     TurtleApp *app = turtleAppCreate(800, 800, "arbolcolores");
